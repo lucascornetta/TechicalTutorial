@@ -1,0 +1,386 @@
+2026-07-21 15:01:26.395 INFO: ===========VERIFYING SETTINGS===========
+2026-07-21 15:01:26.396 INFO: MACE version: 0.3.6
+2026-07-21 15:01:26.421 INFO: Using MPS GPU acceleration
+2026-07-21 15:01:26.421 INFO: 
+2026-07-21 15:01:26.421 INFO: ===========LOADING INPUT DATA===========
+2026-07-21 15:01:27.057 INFO: Using random 10% of training set for validation with indices saved in: ./results/ch2nh2_demo/valid_indices_100.txt
+2026-07-21 15:01:27.063 INFO: Atomic Numbers used: [np.int64(1), np.int64(6), np.int64(7)]
+2026-07-21 15:01:27.063 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2026-07-21 15:01:27.063 INFO: Computing average Atomic Energies using least squares regression
+2026-07-21 15:01:27.090 INFO: Atomic Energies used (z: eV): {1: -571.2413835407937, 6: -142.81034588519861, 7: -142.81034588519861}
+2026-07-21 15:01:27.791 INFO: 
+2026-07-21 15:01:27.791 INFO: ===========MODEL DETAILS===========
+2026-07-21 15:01:28.110 INFO: Average number of neighbors: 4.1
+2026-07-21 15:01:28.110 INFO: During training the following quantities will be reported: energy, forces, dipoles, nacs
+2026-07-21 15:01:28.424 WARNING: Standard deviation of the scaling is zero, Changing to no scaling
+2026-07-21 15:01:28.425 INFO: Building model
+2026-07-21 15:01:28.425 INFO: Message passing with 64 channels and max_L=1 (64x0e + 64x1o)
+2026-07-21 15:01:28.425 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-07-21 15:01:28.425 INFO: 8 radial and 5 basis functions
+2026-07-21 15:01:28.425 INFO: Radial cutoff: 5.0 Å (total receptive field for each atom: 10.0 Å)
+2026-07-21 15:01:28.425 INFO: Distance transform for radial basis functions: None
+2026-07-21 15:01:29.218 INFO: Total number of parameters: 207808
+2026-07-21 15:01:29.218 INFO: 
+2026-07-21 15:01:29.218 INFO: ===========OPTIMIZER INFORMATION===========
+2026-07-21 15:01:29.218 INFO: Using ADAM as parameter optimizer
+2026-07-21 15:01:29.218 INFO: Batch size: 16
+2026-07-21 15:01:29.218 INFO: Using Exponential Moving Average with decay: 0.99
+2026-07-21 15:01:29.219 INFO: Number of gradient updates: 5915
+2026-07-21 15:01:29.219 INFO: Learning rate: 0.001, weight decay: 5e-07
+2026-07-21 15:01:29.219 INFO: WeightedEnergyForcesNacsDipoleLoss(energy_weight=1.000, forces_weight=0.000, dipole_weight=1.000)
+2026-07-21 15:01:29.219 INFO: Using gradient clipping with tolerance=10.000
+2026-07-21 15:01:29.219 INFO: 
+2026-07-21 15:01:29.219 INFO: ===========TRAINING===========
+2026-07-21 15:01:29.219 INFO: Started training, reporting errors on validation set
+2026-07-21 15:01:29.219 INFO: Loss metrics on validation set
+2026-07-21 15:11:49.141 INFO: Training complete
+2026-07-21 15:11:49.144 INFO: 
+2026-07-21 15:11:49.144 INFO: ===========RESULTS===========
+2026-07-21 15:11:49.144 INFO: Computing metrics for training, validation, and test sets
+2026-07-21 15:11:49.144 INFO: Loading checkpoint: ./results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100_epoch-19.pt
+2026-07-21 15:11:49.227 INFO: Loaded Stage one model from epoch 19 for evaluation
+2026-07-21 15:11:49.228 INFO: Evaluating train ...
+2026-07-21 15:12:13.043 INFO: Evaluating valid ...
+2026-07-21 15:12:17.319 INFO: Error-table on TRAIN and VALID:
++-------------+----------+----------+----------+----------+
+| config_type |  MAE E   |  MAE F   | MAE nacs | MAE socs |
++-------------+----------+----------+----------+----------+
+|    train    |    101.8 |      N/A |      N/A |      N/A |
+|    valid    |    114.0 |      N/A |      N/A |      N/A |
++-------------+----------+----------+----------+----------+
+2026-07-21 15:12:17.319 INFO: Saving model to results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100.model
+2026-07-21 15:12:17.427 INFO: Compiling model, saving metadata to results/ch2nh2_demo/ch2nh2_demo_compiled.model
+2026-07-21 15:12:17.752 INFO: Done
+2026-07-23 16:52:55.716 INFO: ===========VERIFYING SETTINGS===========
+2026-07-23 16:52:55.716 INFO: MACE version: 0.3.6
+2026-07-23 16:52:55.746 INFO: Using MPS GPU acceleration
+2026-07-23 16:52:55.747 INFO: 
+2026-07-23 16:52:55.747 INFO: ===========LOADING INPUT DATA===========
+2026-07-23 16:52:56.276 INFO: Using random 10% of training set for validation with indices saved in: ./results/ch2nh2_demo/valid_indices_100.txt
+2026-07-23 16:52:56.278 INFO: Atomic Numbers used: [np.int64(1), np.int64(6), np.int64(7)]
+2026-07-23 16:52:56.278 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2026-07-23 16:52:56.278 INFO: Computing average Atomic Energies using least squares regression
+2026-07-23 16:52:56.282 INFO: Atomic Energies used (z: eV): {1: -567.0335806459167, 6: -141.7583951614791, 7: -141.7583951614791}
+2026-07-23 16:52:56.404 INFO: 
+2026-07-23 16:52:56.404 INFO: ===========MODEL DETAILS===========
+2026-07-23 16:52:56.484 INFO: Average number of neighbors: 3.7
+2026-07-23 16:52:56.484 INFO: During training the following quantities will be reported: energy, forces, dipoles, nacs
+2026-07-23 16:52:56.562 INFO: Building model
+2026-07-23 16:52:56.562 INFO: Message passing with 64 channels and max_L=1 (64x0e + 64x1o)
+2026-07-23 16:52:56.562 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-07-23 16:52:56.562 INFO: 8 radial and 5 basis functions
+2026-07-23 16:52:56.562 INFO: Radial cutoff: 5.0 Å (total receptive field for each atom: 10.0 Å)
+2026-07-23 16:52:56.562 INFO: Distance transform for radial basis functions: None
+2026-07-23 16:52:57.246 INFO: Total number of parameters: 207808
+2026-07-23 16:52:57.246 INFO: 
+2026-07-23 16:52:57.246 INFO: ===========OPTIMIZER INFORMATION===========
+2026-07-23 16:52:57.246 INFO: Using ADAM as parameter optimizer
+2026-07-23 16:52:57.246 INFO: Batch size: 8
+2026-07-23 16:52:57.246 INFO: Using Exponential Moving Average with decay: 0.99
+2026-07-23 16:52:57.246 INFO: Number of gradient updates: 5625
+2026-07-23 16:52:57.246 INFO: Learning rate: 0.001, weight decay: 5e-07
+2026-07-23 16:52:57.246 INFO: WeightedEnergyForcesNacsDipoleLoss(energy_weight=1.000, forces_weight=10.000, dipole_weight=1.000)
+2026-07-23 16:52:57.247 INFO: Using gradient clipping with tolerance=10.000
+2026-07-23 16:52:57.247 INFO: 
+2026-07-23 16:52:57.247 INFO: ===========TRAINING===========
+2026-07-23 16:52:57.247 INFO: Started training, reporting errors on validation set
+2026-07-23 16:52:57.247 INFO: Loss metrics on validation set
+2026-07-23 17:03:37.991 INFO: ===========VERIFYING SETTINGS===========
+2026-07-23 17:03:37.991 INFO: MACE version: 0.3.6
+2026-07-23 17:03:38.017 INFO: Using MPS GPU acceleration
+2026-07-23 17:03:38.017 INFO: 
+2026-07-23 17:03:38.017 INFO: ===========LOADING INPUT DATA===========
+2026-07-23 17:03:38.391 INFO: Using random 10% of training set for validation with indices saved in: ./results/ch2nh2_demo/valid_indices_100.txt
+2026-07-23 17:03:38.392 INFO: Atomic Numbers used: [np.int64(1), np.int64(6), np.int64(7)]
+2026-07-23 17:03:38.392 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2026-07-23 17:03:38.392 INFO: Computing average Atomic Energies using least squares regression
+2026-07-23 17:03:38.397 INFO: Atomic Energies used (z: eV): {1: -567.0335806459167, 6: -141.7583951614791, 7: -141.7583951614791}
+2026-07-23 17:03:38.515 INFO: 
+2026-07-23 17:03:38.515 INFO: ===========MODEL DETAILS===========
+2026-07-23 17:03:38.590 INFO: Average number of neighbors: 3.7
+2026-07-23 17:03:38.590 INFO: During training the following quantities will be reported: energy, forces, dipoles, nacs
+2026-07-23 17:03:38.665 INFO: Building model
+2026-07-23 17:03:38.666 INFO: Message passing with 64 channels and max_L=1 (64x0e + 64x1o)
+2026-07-23 17:03:38.666 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-07-23 17:03:38.666 INFO: 8 radial and 5 basis functions
+2026-07-23 17:03:38.666 INFO: Radial cutoff: 5.0 Å (total receptive field for each atom: 10.0 Å)
+2026-07-23 17:03:38.666 INFO: Distance transform for radial basis functions: None
+2026-07-23 17:03:39.343 INFO: Total number of parameters: 207808
+2026-07-23 17:03:39.343 INFO: 
+2026-07-23 17:03:39.343 INFO: ===========OPTIMIZER INFORMATION===========
+2026-07-23 17:03:39.344 INFO: Using ADAM as parameter optimizer
+2026-07-23 17:03:39.344 INFO: Batch size: 8
+2026-07-23 17:03:39.344 INFO: Using Exponential Moving Average with decay: 0.99
+2026-07-23 17:03:39.344 INFO: Number of gradient updates: 5625
+2026-07-23 17:03:39.344 INFO: Learning rate: 0.001, weight decay: 5e-07
+2026-07-23 17:03:39.344 INFO: WeightedEnergyForcesNacsDipoleLoss(energy_weight=1.000, forces_weight=10.000, dipole_weight=1.000)
+2026-07-23 17:03:39.344 INFO: Using gradient clipping with tolerance=10.000
+2026-07-23 17:03:39.344 INFO: 
+2026-07-23 17:03:39.344 INFO: ===========TRAINING===========
+2026-07-23 17:03:39.344 INFO: Started training, reporting errors on validation set
+2026-07-23 17:03:39.344 INFO: Loss metrics on validation set
+2026-07-23 17:26:33.916 INFO: Training complete
+2026-07-23 17:26:33.918 INFO: 
+2026-07-23 17:26:33.918 INFO: ===========RESULTS===========
+2026-07-23 17:26:33.918 INFO: Computing metrics for training, validation, and test sets
+2026-07-23 17:26:33.918 INFO: Loading checkpoint: ./results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100_epoch-49.pt
+2026-07-23 17:26:33.988 INFO: Loaded Stage one model from epoch 49 for evaluation
+2026-07-23 17:26:33.988 INFO: Evaluating train ...
+2026-07-23 17:26:44.029 INFO: Evaluating valid ...
+2026-07-23 17:26:45.038 INFO: Error-table on TRAIN and VALID:
++-------------+----------+----------+----------+----------+
+| config_type |  MAE E   |  MAE F   | MAE nacs | MAE socs |
++-------------+----------+----------+----------+----------+
+|    train    |    266.0 |    250.1 |      N/A |      N/A |
+|    valid    |    315.8 |    269.2 |      N/A |      N/A |
++-------------+----------+----------+----------+----------+
+2026-07-23 17:26:45.039 INFO: Saving model to results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100.model
+2026-07-23 17:26:45.234 INFO: Compiling model, saving metadata to results/ch2nh2_demo/ch2nh2_demo_compiled.model
+2026-07-23 17:26:45.606 INFO: Done
+2026-07-23 17:52:48.157 INFO: ===========VERIFYING SETTINGS===========
+2026-07-23 17:52:48.158 INFO: MACE version: 0.3.6
+2026-07-23 17:52:48.186 INFO: Using MPS GPU acceleration
+2026-07-23 17:52:48.186 INFO: 
+2026-07-23 17:52:48.186 INFO: ===========LOADING INPUT DATA===========
+2026-07-23 17:52:48.563 INFO: Using random 10% of training set for validation with indices saved in: ./results/ch2nh2_demo/valid_indices_100.txt
+2026-07-23 17:52:48.565 INFO: Atomic Numbers used: [np.int64(1), np.int64(6), np.int64(7)]
+2026-07-23 17:52:48.565 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2026-07-23 17:52:48.565 INFO: Computing average Atomic Energies using least squares regression
+2026-07-23 17:52:48.569 INFO: Atomic Energies used (z: eV): {1: -567.0335806459167, 6: -141.7583951614791, 7: -141.7583951614791}
+2026-07-23 17:52:48.700 INFO: 
+2026-07-23 17:52:48.700 INFO: ===========MODEL DETAILS===========
+2026-07-23 17:52:48.798 INFO: Average number of neighbors: 3.7
+2026-07-23 17:52:48.798 INFO: During training the following quantities will be reported: energy, forces, dipoles, nacs
+2026-07-23 17:52:48.882 INFO: Building model
+2026-07-23 17:52:48.882 INFO: Message passing with 64 channels and max_L=1 (64x0e + 64x1o)
+2026-07-23 17:52:48.883 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-07-23 17:52:48.883 INFO: 8 radial and 5 basis functions
+2026-07-23 17:52:48.883 INFO: Radial cutoff: 5.0 Å (total receptive field for each atom: 10.0 Å)
+2026-07-23 17:52:48.883 INFO: Distance transform for radial basis functions: None
+2026-07-23 17:52:49.588 INFO: Total number of parameters: 207808
+2026-07-23 17:52:49.588 INFO: 
+2026-07-23 17:52:49.588 INFO: ===========OPTIMIZER INFORMATION===========
+2026-07-23 17:52:49.588 INFO: Using ADAM as parameter optimizer
+2026-07-23 17:52:49.588 INFO: Batch size: 8
+2026-07-23 17:52:49.588 INFO: Using Exponential Moving Average with decay: 0.99
+2026-07-23 17:52:49.588 INFO: Number of gradient updates: 5625
+2026-07-23 17:52:49.589 INFO: Learning rate: 0.001, weight decay: 5e-07
+2026-07-23 17:52:49.589 INFO: WeightedEnergyForcesNacsDipoleLoss(energy_weight=1.000, forces_weight=10.000, dipole_weight=1.000)
+2026-07-23 17:52:49.590 INFO: Using gradient clipping with tolerance=10.000
+2026-07-23 17:52:49.590 INFO: 
+2026-07-23 17:52:49.590 INFO: ===========TRAINING===========
+2026-07-23 17:52:49.590 INFO: Started training, reporting errors on validation set
+2026-07-23 17:52:49.590 INFO: Loss metrics on validation set
+2026-07-23 18:15:35.604 INFO: Training complete
+2026-07-23 18:15:35.606 INFO: 
+2026-07-23 18:15:35.606 INFO: ===========RESULTS===========
+2026-07-23 18:15:35.606 INFO: Computing metrics for training, validation, and test sets
+2026-07-23 18:15:35.607 INFO: Loading checkpoint: ./results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100_epoch-49.pt
+2026-07-23 18:15:35.694 INFO: Loaded Stage one model from epoch 49 for evaluation
+2026-07-23 18:15:35.695 INFO: Evaluating train ...
+2026-07-23 18:15:45.513 INFO: Evaluating valid ...
+2026-07-23 18:15:46.427 INFO: Error-table on TRAIN and VALID:
++-------------+----------+----------+----------+----------+
+| config_type |  MAE E   |  MAE F   | MAE nacs | MAE socs |
++-------------+----------+----------+----------+----------+
+|    train    |    266.0 |    250.1 |      N/A |      N/A |
+|    valid    |    315.8 |    269.2 |      N/A |      N/A |
++-------------+----------+----------+----------+----------+
+2026-07-23 18:15:46.427 INFO: Saving model to results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100.model
+2026-07-23 18:15:46.615 INFO: Compiling model, saving metadata to results/ch2nh2_demo/ch2nh2_demo_compiled.model
+2026-07-23 18:15:46.952 INFO: Done
+2026-07-28 02:33:22.341 INFO: ===========VERIFYING SETTINGS===========
+2026-07-28 02:33:22.342 INFO: MACE version: 0.3.6
+2026-07-28 02:33:22.383 INFO: Using MPS GPU acceleration
+2026-07-28 02:33:22.384 INFO: 
+2026-07-28 02:33:22.384 INFO: ===========LOADING INPUT DATA===========
+2026-07-28 02:33:22.768 INFO: Using random 10% of training set for validation with indices saved in: ./results/ch2nh2_demo/valid_indices_100.txt
+2026-07-28 02:33:22.769 INFO: Atomic Numbers used: [np.int64(1), np.int64(6), np.int64(7)]
+2026-07-28 02:33:22.769 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2026-07-28 02:33:22.769 INFO: Computing average Atomic Energies using least squares regression
+2026-07-28 02:33:22.774 INFO: Atomic Energies used (z: eV): {1: -567.0335806459167, 6: -141.7583951614791, 7: -141.7583951614791}
+2026-07-28 02:33:22.905 INFO: 
+2026-07-28 02:33:22.906 INFO: ===========MODEL DETAILS===========
+2026-07-28 02:33:23.001 INFO: Average number of neighbors: 3.7
+2026-07-28 02:33:23.001 INFO: During training the following quantities will be reported: energy, forces, dipoles, nacs
+2026-07-28 02:33:23.084 INFO: Building model
+2026-07-28 02:33:23.084 INFO: Message passing with 64 channels and max_L=1 (64x0e + 64x1o)
+2026-07-28 02:33:23.084 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-07-28 02:33:23.084 INFO: 8 radial and 5 basis functions
+2026-07-28 02:33:23.084 INFO: Radial cutoff: 5.0 Å (total receptive field for each atom: 10.0 Å)
+2026-07-28 02:33:23.084 INFO: Distance transform for radial basis functions: None
+2026-07-28 02:33:23.811 INFO: Total number of parameters: 207808
+2026-07-28 02:33:23.811 INFO: 
+2026-07-28 02:33:23.811 INFO: ===========OPTIMIZER INFORMATION===========
+2026-07-28 02:33:23.811 INFO: Using ADAM as parameter optimizer
+2026-07-28 02:33:23.811 INFO: Batch size: 8
+2026-07-28 02:33:23.811 INFO: Using Exponential Moving Average with decay: 0.99
+2026-07-28 02:33:23.811 INFO: Number of gradient updates: 5625
+2026-07-28 02:33:23.811 INFO: Learning rate: 0.001, weight decay: 5e-07
+2026-07-28 02:33:23.811 INFO: WeightedEnergyForcesNacsDipoleLoss(energy_weight=1.000, forces_weight=10.000, dipole_weight=1.000)
+2026-07-28 02:33:23.812 INFO: Using gradient clipping with tolerance=10.000
+2026-07-28 02:33:23.812 INFO: 
+2026-07-28 02:33:23.812 INFO: ===========TRAINING===========
+2026-07-28 02:33:23.813 INFO: Started training, reporting errors on validation set
+2026-07-28 02:33:23.813 INFO: Loss metrics on validation set
+2026-07-28 02:56:54.326 INFO: Training complete
+2026-07-28 02:56:54.328 INFO: 
+2026-07-28 02:56:54.328 INFO: ===========RESULTS===========
+2026-07-28 02:56:54.328 INFO: Computing metrics for training, validation, and test sets
+2026-07-28 02:56:54.329 INFO: Loading checkpoint: ./results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100_epoch-49.pt
+2026-07-28 02:56:54.417 INFO: Loaded Stage one model from epoch 49 for evaluation
+2026-07-28 02:56:54.418 INFO: Evaluating train ...
+2026-07-28 02:57:05.364 INFO: Evaluating valid ...
+2026-07-28 02:57:06.384 INFO: Error-table on TRAIN and VALID:
++-------------+----------+----------+----------+----------+
+| config_type |  MAE E   |  MAE F   | MAE nacs | MAE socs |
++-------------+----------+----------+----------+----------+
+|    train    |    266.0 |    250.1 |      N/A |      N/A |
+|    valid    |    315.8 |    269.2 |      N/A |      N/A |
++-------------+----------+----------+----------+----------+
+2026-07-28 02:57:06.384 INFO: Saving model to results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100.model
+2026-07-28 02:57:06.562 INFO: Compiling model, saving metadata to results/ch2nh2_demo/ch2nh2_demo_compiled.model
+2026-07-28 02:57:06.939 INFO: Done
+2026-07-28 03:13:11.254 INFO: ===========VERIFYING SETTINGS===========
+2026-07-28 03:13:11.254 INFO: MACE version: 0.3.6
+2026-07-28 03:13:11.278 INFO: Using MPS GPU acceleration
+2026-07-28 03:13:11.278 INFO: 
+2026-07-28 03:13:11.278 INFO: ===========LOADING INPUT DATA===========
+2026-07-28 03:13:11.668 INFO: Using random 10% of training set for validation with indices saved in: ./results/ch2nh2_demo/valid_indices_100.txt
+2026-07-28 03:13:11.670 INFO: Atomic Numbers used: [np.int64(1), np.int64(6), np.int64(7)]
+2026-07-28 03:13:11.670 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2026-07-28 03:13:11.670 INFO: Computing average Atomic Energies using least squares regression
+2026-07-28 03:13:11.675 INFO: Atomic Energies used (z: eV): {1: -567.0335806459167, 6: -141.7583951614791, 7: -141.7583951614791}
+2026-07-28 03:13:11.799 INFO: 
+2026-07-28 03:13:11.799 INFO: ===========MODEL DETAILS===========
+2026-07-28 03:13:11.874 INFO: Average number of neighbors: 3.7
+2026-07-28 03:13:11.874 INFO: During training the following quantities will be reported: energy, forces, dipoles, nacs
+2026-07-28 03:13:11.950 INFO: Building model
+2026-07-28 03:13:11.950 INFO: Message passing with 64 channels and max_L=1 (64x0e + 64x1o)
+2026-07-28 03:13:11.950 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-07-28 03:13:11.950 INFO: 8 radial and 5 basis functions
+2026-07-28 03:13:11.950 INFO: Radial cutoff: 5.0 Å (total receptive field for each atom: 10.0 Å)
+2026-07-28 03:13:11.950 INFO: Distance transform for radial basis functions: None
+2026-07-28 03:15:47.660 INFO: ===========VERIFYING SETTINGS===========
+2026-07-28 03:15:47.660 INFO: MACE version: 0.3.6
+2026-07-28 03:15:47.685 INFO: Using MPS GPU acceleration
+2026-07-28 03:15:47.685 INFO: 
+2026-07-28 03:15:47.686 INFO: ===========LOADING INPUT DATA===========
+2026-07-28 03:15:48.064 INFO: Using random 10% of training set for validation with indices saved in: ./results/ch2nh2_demo/valid_indices_100.txt
+2026-07-28 03:15:48.066 INFO: Atomic Numbers used: [np.int64(1), np.int64(6), np.int64(7)]
+2026-07-28 03:15:48.066 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2026-07-28 03:15:48.066 INFO: Computing average Atomic Energies using least squares regression
+2026-07-28 03:15:48.070 INFO: Atomic Energies used (z: eV): {1: -567.0335806459167, 6: -141.7583951614791, 7: -141.7583951614791}
+2026-07-28 03:15:48.189 INFO: 
+2026-07-28 03:15:48.190 INFO: ===========MODEL DETAILS===========
+2026-07-28 03:15:48.265 INFO: Average number of neighbors: 3.7
+2026-07-28 03:15:48.265 INFO: During training the following quantities will be reported: energy, forces, dipoles, nacs
+2026-07-28 03:15:48.339 INFO: Building model
+2026-07-28 03:15:48.339 INFO: Message passing with 64 channels and max_L=1 (64x0e + 64x1o)
+2026-07-28 03:15:48.339 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-07-28 03:15:48.339 INFO: 8 radial and 5 basis functions
+2026-07-28 03:15:48.339 INFO: Radial cutoff: 5.0 Å (total receptive field for each atom: 10.0 Å)
+2026-07-28 03:15:48.339 INFO: Distance transform for radial basis functions: None
+2026-07-28 03:17:00.681 INFO: ===========VERIFYING SETTINGS===========
+2026-07-28 03:17:00.681 INFO: MACE version: 0.3.6
+2026-07-28 03:17:00.707 INFO: Using MPS GPU acceleration
+2026-07-28 03:17:00.707 INFO: 
+2026-07-28 03:17:00.707 INFO: ===========LOADING INPUT DATA===========
+2026-07-28 03:17:01.086 INFO: Using random 10% of training set for validation with indices saved in: ./results/ch2nh2_demo/valid_indices_100.txt
+2026-07-28 03:17:01.087 INFO: Atomic Numbers used: [np.int64(1), np.int64(6), np.int64(7)]
+2026-07-28 03:17:01.087 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2026-07-28 03:17:01.087 INFO: Computing average Atomic Energies using least squares regression
+2026-07-28 03:17:01.091 INFO: Atomic Energies used (z: eV): {1: -567.0335806459167, 6: -141.7583951614791, 7: -141.7583951614791}
+2026-07-28 03:17:01.211 INFO: 
+2026-07-28 03:17:01.211 INFO: ===========MODEL DETAILS===========
+2026-07-28 03:17:01.288 INFO: Average number of neighbors: 3.7
+2026-07-28 03:17:01.288 INFO: During training the following quantities will be reported: energy, forces, dipoles, nacs
+2026-07-28 03:17:01.365 INFO: Building model
+2026-07-28 03:17:01.365 INFO: Message passing with 64 channels and max_L=1 (64x0e + 64x1o)
+2026-07-28 03:17:01.365 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-07-28 03:17:01.365 INFO: 8 radial and 5 basis functions
+2026-07-28 03:17:01.365 INFO: Radial cutoff: 5.0 Å (total receptive field for each atom: 10.0 Å)
+2026-07-28 03:17:01.365 INFO: Distance transform for radial basis functions: None
+2026-07-28 03:17:02.057 INFO: Total number of parameters: 208000
+2026-07-28 03:17:02.057 INFO: 
+2026-07-28 03:17:02.057 INFO: ===========OPTIMIZER INFORMATION===========
+2026-07-28 03:17:02.057 INFO: Using ADAM as parameter optimizer
+2026-07-28 03:17:02.057 INFO: Batch size: 8
+2026-07-28 03:17:02.057 INFO: Using Exponential Moving Average with decay: 0.99
+2026-07-28 03:17:02.057 INFO: Number of gradient updates: 5625
+2026-07-28 03:17:02.057 INFO: Learning rate: 0.001, weight decay: 5e-07
+2026-07-28 03:17:02.058 INFO: WeightedEnergyForcesNacsDipoleLoss(energy_weight=1.000, forces_weight=10.000, dipole_weight=1.000)
+2026-07-28 03:17:02.059 INFO: Using gradient clipping with tolerance=10.000
+2026-07-28 03:17:02.059 INFO: 
+2026-07-28 03:17:02.059 INFO: ===========TRAINING===========
+2026-07-28 03:17:02.059 INFO: Started training, reporting errors on validation set
+2026-07-28 03:17:02.059 INFO: Loss metrics on validation set
+2026-07-28 03:17:05.386 INFO: Initial: loss=  5.2753, MAE_E_per_atom=   413.7 meV, MAE_F=  1363.5 meV / A, MAE_nacs=  205.19
+2026-07-28 03:17:36.551 INFO: Epoch 0: loss=  2.9109, MAE_E_per_atom=   256.1 meV, MAE_F=   787.7 meV / A, MAE_nacs=  194.26
+2026-07-28 03:18:06.729 INFO: Epoch 1: loss=  2.3367, MAE_E_per_atom=   209.7 meV, MAE_F=   679.4 meV / A, MAE_nacs=  195.48
+2026-07-28 03:18:37.062 INFO: Epoch 2: loss=  2.0734, MAE_E_per_atom=   188.3 meV, MAE_F=   627.7 meV / A, MAE_nacs=  194.97
+2026-07-28 03:19:08.027 INFO: Epoch 3: loss=  1.9065, MAE_E_per_atom=   175.4 meV, MAE_F=   588.4 meV / A, MAE_nacs=  196.05
+2026-07-28 03:19:38.212 INFO: Epoch 4: loss=  1.7917, MAE_E_per_atom=   167.0 meV, MAE_F=   552.8 meV / A, MAE_nacs=  196.61
+2026-07-28 03:20:09.229 INFO: Epoch 5: loss=  1.7207, MAE_E_per_atom=   161.3 meV, MAE_F=   525.9 meV / A, MAE_nacs=  195.71
+2026-07-28 03:20:40.307 INFO: Epoch 6: loss=  1.6559, MAE_E_per_atom=   156.0 meV, MAE_F=   501.4 meV / A, MAE_nacs=  192.67
+2026-07-28 03:21:10.433 INFO: Epoch 7: loss=  1.6043, MAE_E_per_atom=   150.5 meV, MAE_F=   482.3 meV / A, MAE_nacs=  190.34
+2026-07-28 03:21:39.071 INFO: Epoch 8: loss=  1.5663, MAE_E_per_atom=   146.7 meV, MAE_F=   467.1 meV / A, MAE_nacs=  189.92
+2026-07-28 03:21:54.618 INFO: Epoch 9: loss=  1.5399, MAE_E_per_atom=   143.4 meV, MAE_F=   457.2 meV / A, MAE_nacs=  188.01
+2026-07-28 03:22:09.448 INFO: Epoch 10: loss=  1.5219, MAE_E_per_atom=   140.9 meV, MAE_F=   449.4 meV / A, MAE_nacs=  187.52
+2026-07-28 03:22:23.418 INFO: Epoch 11: loss=  1.5029, MAE_E_per_atom=   138.6 meV, MAE_F=   442.1 meV / A, MAE_nacs=  186.42
+2026-07-28 03:22:37.770 INFO: Epoch 12: loss=  1.4879, MAE_E_per_atom=   136.6 meV, MAE_F=   436.6 meV / A, MAE_nacs=  186.39
+2026-07-28 03:22:53.561 INFO: Epoch 13: loss=  1.4714, MAE_E_per_atom=   134.4 meV, MAE_F=   431.4 meV / A, MAE_nacs=  185.68
+2026-07-28 03:23:08.944 INFO: Epoch 14: loss=  1.4590, MAE_E_per_atom=   132.6 meV, MAE_F=   426.9 meV / A, MAE_nacs=  185.63
+2026-07-28 03:23:23.178 INFO: Epoch 15: loss=  1.4470, MAE_E_per_atom=   129.7 meV, MAE_F=   422.2 meV / A, MAE_nacs=  185.46
+2026-07-28 03:23:37.728 INFO: Epoch 16: loss=  1.4320, MAE_E_per_atom=   128.5 meV, MAE_F=   416.6 meV / A, MAE_nacs=  185.00
+2026-07-28 03:23:52.005 INFO: Epoch 17: loss=  1.4196, MAE_E_per_atom=   127.3 meV, MAE_F=   411.7 meV / A, MAE_nacs=  184.91
+2026-07-28 03:24:07.288 INFO: Epoch 18: loss=  1.4097, MAE_E_per_atom=   125.4 meV, MAE_F=   407.1 meV / A, MAE_nacs=  184.81
+2026-07-28 03:24:23.360 INFO: Epoch 19: loss=  1.3954, MAE_E_per_atom=   123.9 meV, MAE_F=   401.8 meV / A, MAE_nacs=  184.07
+2026-07-28 03:24:38.882 INFO: Epoch 20: loss=  1.3846, MAE_E_per_atom=   121.7 meV, MAE_F=   396.5 meV / A, MAE_nacs=  184.21
+2026-07-28 03:24:54.392 INFO: Epoch 21: loss=  1.3713, MAE_E_per_atom=   120.4 meV, MAE_F=   391.1 meV / A, MAE_nacs=  183.86
+2026-07-28 03:25:10.477 INFO: Epoch 22: loss=  1.3579, MAE_E_per_atom=   119.0 meV, MAE_F=   385.7 meV / A, MAE_nacs=  183.85
+2026-07-28 03:25:26.370 INFO: Epoch 23: loss=  1.3454, MAE_E_per_atom=   117.1 meV, MAE_F=   380.4 meV / A, MAE_nacs=  183.79
+2026-07-28 03:25:44.038 INFO: Epoch 24: loss=  1.3375, MAE_E_per_atom=   114.9 meV, MAE_F=   376.1 meV / A, MAE_nacs=  183.96
+2026-07-28 03:26:00.417 INFO: Epoch 25: loss=  1.3240, MAE_E_per_atom=   113.2 meV, MAE_F=   372.1 meV / A, MAE_nacs=  183.67
+2026-07-28 03:26:16.732 INFO: Epoch 26: loss=  1.3147, MAE_E_per_atom=   110.7 meV, MAE_F=   367.9 meV / A, MAE_nacs=  183.42
+2026-07-28 03:26:33.215 INFO: Epoch 27: loss=  1.3022, MAE_E_per_atom=   108.9 meV, MAE_F=   363.4 meV / A, MAE_nacs=  182.79
+2026-07-28 03:26:49.515 INFO: Epoch 28: loss=  1.2913, MAE_E_per_atom=   106.5 meV, MAE_F=   360.0 meV / A, MAE_nacs=  182.63
+2026-07-28 03:27:06.416 INFO: Epoch 29: loss=  1.2813, MAE_E_per_atom=   103.1 meV, MAE_F=   355.9 meV / A, MAE_nacs=  182.70
+2026-07-28 03:27:23.316 INFO: Epoch 30: loss=  1.2749, MAE_E_per_atom=   101.6 meV, MAE_F=   353.1 meV / A, MAE_nacs=  182.23
+2026-07-28 03:27:39.740 INFO: Epoch 31: loss=  1.2669, MAE_E_per_atom=    99.3 meV, MAE_F=   349.6 meV / A, MAE_nacs=  181.97
+2026-07-28 03:27:56.324 INFO: Epoch 32: loss=  1.2576, MAE_E_per_atom=    97.1 meV, MAE_F=   345.7 meV / A, MAE_nacs=  181.72
+2026-07-28 03:28:13.180 INFO: Epoch 33: loss=  1.2479, MAE_E_per_atom=    94.6 meV, MAE_F=   341.9 meV / A, MAE_nacs=  181.40
+2026-07-28 03:28:29.659 INFO: Epoch 34: loss=  1.2413, MAE_E_per_atom=    92.4 meV, MAE_F=   338.0 meV / A, MAE_nacs=  181.39
+2026-07-28 03:28:46.231 INFO: Epoch 35: loss=  1.2317, MAE_E_per_atom=    90.5 meV, MAE_F=   333.5 meV / A, MAE_nacs=  181.21
+2026-07-28 03:29:03.464 INFO: Epoch 36: loss=  1.2237, MAE_E_per_atom=    88.0 meV, MAE_F=   330.1 meV / A, MAE_nacs=  180.75
+2026-07-28 03:29:20.613 INFO: Epoch 37: loss=  1.2159, MAE_E_per_atom=    85.7 meV, MAE_F=   326.5 meV / A, MAE_nacs=  180.42
+2026-07-28 03:29:37.926 INFO: Epoch 38: loss=  1.2103, MAE_E_per_atom=    83.5 meV, MAE_F=   323.9 meV / A, MAE_nacs=  180.39
+2026-07-28 03:29:55.112 INFO: Epoch 39: loss=  1.2044, MAE_E_per_atom=    82.6 meV, MAE_F=   321.0 meV / A, MAE_nacs=  180.28
+2026-07-28 03:30:12.381 INFO: Epoch 40: loss=  1.1984, MAE_E_per_atom=    80.6 meV, MAE_F=   318.1 meV / A, MAE_nacs=  180.19
+2026-07-28 03:30:29.645 INFO: Epoch 41: loss=  1.1931, MAE_E_per_atom=    79.7 meV, MAE_F=   314.5 meV / A, MAE_nacs=  180.38
+2026-07-28 03:30:46.597 INFO: Epoch 42: loss=  1.1901, MAE_E_per_atom=    78.3 meV, MAE_F=   313.1 meV / A, MAE_nacs=  180.33
+2026-07-28 03:31:02.084 INFO: Epoch 43: loss=  1.1855, MAE_E_per_atom=    76.7 meV, MAE_F=   310.4 meV / A, MAE_nacs=  180.23
+2026-07-28 03:31:16.992 INFO: Epoch 44: loss=  1.1817, MAE_E_per_atom=    75.4 meV, MAE_F=   308.3 meV / A, MAE_nacs=  180.17
+2026-07-28 03:31:31.617 INFO: Epoch 45: loss=  1.1784, MAE_E_per_atom=    74.2 meV, MAE_F=   306.0 meV / A, MAE_nacs=  180.03
+2026-07-28 03:31:47.162 INFO: Epoch 46: loss=  1.1725, MAE_E_per_atom=    73.1 meV, MAE_F=   303.4 meV / A, MAE_nacs=  179.86
+2026-07-28 03:32:05.278 INFO: Epoch 47: loss=  1.1685, MAE_E_per_atom=    71.6 meV, MAE_F=   301.8 meV / A, MAE_nacs=  179.99
+2026-07-28 03:32:21.420 INFO: Epoch 48: loss=  1.1656, MAE_E_per_atom=    70.7 meV, MAE_F=   300.3 meV / A, MAE_nacs=  180.24
+2026-07-28 03:32:37.208 INFO: Epoch 49: loss=  1.1632, MAE_E_per_atom=    70.0 meV, MAE_F=   298.7 meV / A, MAE_nacs=  179.74
+2026-07-28 03:32:37.242 INFO: Training complete
+2026-07-28 03:32:37.242 INFO: 
+2026-07-28 03:32:37.242 INFO: ===========RESULTS===========
+2026-07-28 03:32:37.242 INFO: Computing metrics for training, validation, and test sets
+2026-07-28 03:32:37.242 INFO: Loading checkpoint: ./results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100_epoch-49.pt
+2026-07-28 03:32:37.278 INFO: Loaded Stage one model from epoch 49 for evaluation
+2026-07-28 03:32:37.278 INFO: Evaluating train ...
+2026-07-28 03:32:42.601 INFO: Evaluating valid ...
+2026-07-28 03:32:43.091 INFO: Error-table on TRAIN and VALID:
++-------------+----------+----------+----------+
+| config_type |  MAE E   |  MAE F   | MAE nacs |
++-------------+----------+----------+----------+
+|    train    |    381.6 |    291.9 |    184.8 |
+|    valid    |    420.2 |    298.7 |    179.7 |
++-------------+----------+----------+----------+
+2026-07-28 03:32:43.091 INFO: Saving model to results/ch2nh2_demo/checkpoints/ch2nh2_demo_run-100.model
+2026-07-28 03:32:43.170 INFO: Compiling model, saving metadata to results/ch2nh2_demo/ch2nh2_demo_compiled.model
+2026-07-28 03:32:43.334 INFO: Done
